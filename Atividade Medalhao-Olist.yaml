@@ -1,0 +1,28 @@
+resources:
+  jobs:
+    Atividade_Medalhao_Olist:
+      name: Atividade Medalhao-Olist
+      schedule:
+        quartz_cron_expression: 26 0 13 * * ?
+        timezone_id: America/Recife
+        pause_status: UNPAUSED
+      tasks:
+        - task_key: Bronze
+          notebook_task:
+            notebook_path: /Workspace/Users/rtmr@cesar.school/Atividade_land_to_bronze
+            source: WORKSPACE
+        - task_key: Silver
+          depends_on:
+            - task_key: Bronze
+          notebook_task:
+            notebook_path: /Workspace/Users/rtmr@cesar.school/Atividade_bronze_to_silver
+            source: WORKSPACE
+        - task_key: Gold
+          depends_on:
+            - task_key: Silver
+          notebook_task:
+            notebook_path: /Workspace/Users/rtmr@cesar.school/Atividade_silver_to_gold
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
