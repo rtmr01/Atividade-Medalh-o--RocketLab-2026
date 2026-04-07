@@ -26,3 +26,8 @@ A etapa final consolida as tabelas de fato e dimensão em visões agregadas. Foc
 ## Orquestração
 
 O fluxo de dados é automatizado através de um Workflow que coordena a execução sequencial dos notebooks. O sistema está configurado para uma execução diária agendada para as 13:00 (Fuso America/Recife), garantindo que os dados analíticos estejam sempre atualizados para a tomada de decisão.
+
+<img width="1255" height="685" alt="Captura de Tela 2026-04-07 às 13 30 51" src="https://github.com/user-attachments/assets/2263d45a-14a8-4c50-90c3-e8261d6f22a4" />
+
+
+<img width="767" height="300" alt="Captura de Tela 2026-04-07 às 13 30 33" src="https://github.com/user-attachments/assets/8db355e3-6c50-48bc-aa7e-57b6e5a1648f" />
